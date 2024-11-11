@@ -18,11 +18,7 @@ Getting Started
 ---------------
 **Initialize local repository**
 ```bash
-repo init -u https://github.com/ZeetaaXmayurOS/AyanBhadwaHai --git-lfs
-```
-
-**Sync up with this command:**
-```bash
+repo init --depth=1 --no-repo-verify -u https://github.com/ZeetaaXmayurOS/AyanBhadwaHai --git-lfs -g default,-mips,-darwin,-notdefault
 repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
 ```
 
