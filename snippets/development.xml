@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch=".."
+           review="review.lineageos.org" />
+
+  <remote name="mnri"
+          fetch="https://github.com/minaripenguin/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fifteen" />
+          
+  <remote name="nabu-gitlab"
+          fetch="https://gitlab.com/dev-harsh1998/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/lineage-21" />
+          
+  <remote name="lineage"
+          fetch="https://github.com/LineageOS/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/lineage-22.0" />
+
+  <remote name="muppets"
+          fetch="https://github.com/TheMuppets/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/lineage-22.0" />
+
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="lineage" revision="lineage-21" clone-depth="1" />
+  <project path="device/xiaomi/nabu" name="android_device_xiaomi_nabu" remote="mnri" clone-depth="1" />
+  <project path="kernel/xiaomi/nabu" name="android_kernel_xiaomi_nabu" remote="mnri" clone-depth="1" />
+  <project path="vendor/xiaomi/nabu" name="android_vendor_xiaomi_nabu" remote="nabu-gitlab" clone-depth="1" />
+
+  <project path="device/google/pantah-kernels/5.10" remote="aosp-pantah" name="device/google/pantah-kernels/5.10" clone-depth="1"  />
+  <project path="device/google/pantah-kernel" remote="aosp-pantah" name="device/google/pantah-kernel" revision="refs/tags/android-security-14.0.0_r13" clone-depth="1" />
+
+  <project path="device/google/cheetah" remote="github" name="LineageOS/android_device_google_cheetah" revision="lineage-22.0" clone-depth="1" />
+  <project path="device/google/pantah" remote="mnri" name="android_device_google_pantah" clone-depth="1" />
+  <project path="device/google/gs201" remote="mnri" name="android_device_google_gs201" clone-depth="1" />
+  <project path="device/google/gs101" remote="github" name="LineageOS/android_device_google_gs101" revision="lineage-22.0" clone-depth="1" />
+  <project path="device/google/gs-common" remote="github" name="LineageOS/android_device_google_gs-common" revision="lineage-22.0" clone-depth="1" />
+  
+  <project path="vendor/google/cheetah" name="proprietary_vendor_google_cheetah" remote="muppets" clone-depth="1" />
+</manifest>
